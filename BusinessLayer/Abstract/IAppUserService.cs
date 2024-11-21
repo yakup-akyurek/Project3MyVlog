@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-	public interface IArticleService:IGenericService<Article>
-	{
-        List<Article> TArticlelistWithCategory();
-        List<Article> TArticleListWithCategoryAndAppUser();
+    public interface IAppUserService:IGenericService<AppUser>
+    {
     }
 }

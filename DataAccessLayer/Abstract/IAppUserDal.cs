@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IArticalDal:IGenericDal<Article>
+    public interface IAppUserDal:IGenericDal<AppUser>
     {
-        List<Article> ArticlelistWithCategory();
-        List<Article> ArticleListWithCategoryAndAppUser();
     }
-
 }

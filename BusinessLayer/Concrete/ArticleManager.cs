@@ -18,7 +18,17 @@ namespace BusinessLayer.Concrete
 			_articalDal = articalDal;
 		}
 
-		public void TDelete(int id)
+        public List<Article> TArticlelistWithCategory()
+        {
+            return _articalDal.ArticlelistWithCategory();
+        }
+
+        public List<Article> TArticleListWithCategoryAndAppUser()
+        {
+            return _articalDal.ArticleListWithCategoryAndAppUser();
+        }
+
+        public void TDelete(int id)
 		{
 			_articalDal.Delete(id);
 		}
