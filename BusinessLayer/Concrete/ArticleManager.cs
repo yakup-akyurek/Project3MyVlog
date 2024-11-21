@@ -38,12 +38,19 @@ namespace BusinessLayer.Concrete
 			return _articalDal.GetAll();
 		}
 
-		public Article TGetById(int id)
+        
+
+        public Article TGetById(int id)
 		{
 			return _articalDal.GetById(id);
 		}
 
-		public void TInsert(Article entity)
+        public Article TGetLastArticle()
+        {
+            return _articalDal.GetLastArticle();
+        }
+
+        public void TInsert(Article entity)
 		{
 			_articalDal.Insert(entity);
 		}

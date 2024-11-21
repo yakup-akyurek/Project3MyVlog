@@ -11,5 +11,6 @@ namespace BusinessLayer.Abstract
 	{
         List<Article> TArticlelistWithCategory();
         List<Article> TArticleListWithCategoryAndAppUser();
+        public Article TGetLastArticle();
     }
 }

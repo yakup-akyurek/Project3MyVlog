@@ -11,6 +11,7 @@ namespace DataAccessLayer.Abstract
     {
         List<Article> ArticlelistWithCategory();
         List<Article> ArticleListWithCategoryAndAppUser();
+        Article GetLastArticle();
     }
 
 }
