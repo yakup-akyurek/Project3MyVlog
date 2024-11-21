@@ -7,6 +7,7 @@
 
 <div class="container">
     <form method="post">
+        <input type="hidden " asp-for="ArticleId"/>
         <label>yeni makale başlığı </label>
         <input type="text" asp-for="Title" class="form-control" />
 
@@ -17,12 +18,12 @@
         <input type="text" asp-for="CoverImageUrl" class="form-control" />
 
         <label>kategori  </label>
-        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.v1,new {@class="form-control"})
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control" })
         <br />
         <label>kullanıcı </label>
         <@Html.DropDownListFor(x => x.AppUserId, (List<SelectListItem>)ViewBag.v2, new { @class = "form-control" })
 
-      
+
 
 
         <button class="btn btn-info">makaleyi ekle ekle</button>
