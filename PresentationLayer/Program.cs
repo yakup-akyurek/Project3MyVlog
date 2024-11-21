@@ -1,4 +1,8 @@
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using PresentationLayer.Models;
 
@@ -7,6 +11,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<SensiveContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<SensiveContext>().AddErrorDescriber<CustomIdentityCalidator>();
+builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+
+builder.Services.AddScoped<IArticalDal,EfArticleDal>();
+builder.Services.AddScoped<IArticleService, ArticleManager>();
+
+builder.Services.AddScoped<ICommentDal, EfCommentDal>();
+builder.Services.AddScoped<ICommentService, CommentManager>();
+
+builder.Services.AddScoped<IContactDal, EfContactDal>();
+builder.Services.AddScoped<IContactService, ContactManager>();
+
 
 builder.Services.AddControllersWithViews();
 
