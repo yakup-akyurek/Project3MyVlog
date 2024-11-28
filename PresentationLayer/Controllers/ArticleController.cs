@@ -103,5 +103,19 @@ namespace PresentationLayer.Controllers
             _articleService.TUpdate(article);
             return RedirectToAction("ArticleListWithCategoryAndAppUser");
         }
+        public IActionResult ArticleDetail(int id) 
+        {
+            ViewBag.i=id;
+            var value = _articleService.TGetById(id);
+            return View(value);
+        }
+        //[HttpPost]
+        //public IActionResult ArticleDetail(Comment comment)
+        //{
+        //    comment.CreatedDate = DateTime.Now;
+        //    comment.ArticleId = 0;
+        //    comment.AppUserId=0;
+        //    return RedirectToAction("ArticleList", "Default");
+        //}
     }
 }
