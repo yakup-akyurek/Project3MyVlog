@@ -38,7 +38,10 @@ namespace BusinessLayer.Concrete
 			return _articalDal.GetAll();
 		}
 
-        
+        public List<Article> TGetArticlesByAppUserId(int id)
+        {
+            return _articalDal.GetArticlesByAppUserId(id);
+        }
 
         public Article TGetById(int id)
 		{

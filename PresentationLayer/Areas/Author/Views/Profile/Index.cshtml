@@ -1,0 +1,22 @@
+﻿@model PresentationLayer.Areas.Author.Models.UserEditViewModel
+@{
+    Layout = null;
+}
+
+<link href="c:\users\akyur\source\repos\myblog\presentationlayer\wwwroot\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+<form method="post">
+    <div class="container">
+        <label>adınız</label>
+        <input type="text" asp-for="Name" class="form-control"/>
+        <label>soyadınız</label>
+        <input type="text" asp-for="Surname" class="form-control"/>
+        <label>kullanıcı adınız</label>
+        <input type="text" asp-for="UserName" class="form-control" />
+        <label>email adresiniz</label>
+        <input type="text" asp-for="Email" class="form-control" />
+        <label>şifreniz</label>
+        <input type="text" asp-for="Password" class="form-control" />
+        <button class="btn btn-info"> profili düzenle</button>
+    </div>
+
+</form>

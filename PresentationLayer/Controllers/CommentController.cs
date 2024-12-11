@@ -15,6 +15,7 @@ namespace PresentationLayer.Controllers
         [HttpGet]
         public PartialViewResult AddComment()
         {
+            
             return PartialView();
         }
         [HttpPost]
